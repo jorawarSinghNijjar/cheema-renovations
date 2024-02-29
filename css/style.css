@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.nav__list {
+  min-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav__list-item {
+  font-weight: 600;
+}
+.nav__list-item:hover {
+  color: #FF6400;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 118rem;
+  margin: 0 auto;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 62.5% of default 16px = 10px to make 1rem calculations simple*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #575757;
+}
+
+.section-hero {
+  position: relative;
+}
+.section-hero__hero-image-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100rem;
+  max-height: 63rem;
+}
+.section-hero__hero-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
