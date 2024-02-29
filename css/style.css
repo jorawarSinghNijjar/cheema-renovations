@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;500&display=swap");
 .nav {
   width: 100%;
   display: flex;
@@ -23,6 +25,50 @@
 .container {
   max-width: 118rem;
   margin: 0 auto;
+}
+
+.button {
+  padding: 2rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.button--primary {
+  background-color: #FF6400;
+  color: #ffffff;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 8rem;
+  background-color: #FF7849;
+  box-shadow: 0px 0px 30px 0px rgba(255, 181, 156, 0.4);
+}
+.play-button:hover {
+  background-color: #ff6530;
+}
+.play-button__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+.play-button__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 *,
@@ -50,10 +96,19 @@ body {
   color: #575757;
 }
 
+h1 {
+  font-size: 5.2rem;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+}
+
 .section-hero {
   position: relative;
+  padding-top: 7.8rem;
+  padding-bottom: 6.8rem;
 }
 .section-hero__hero-image-wrapper {
+  z-index: -10;
   position: absolute;
   right: 0;
   top: 0;
@@ -64,6 +119,30 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+.section-hero__heading-wrapper {
+  max-width: 67rem;
+  margin-bottom: 3.8rem;
+}
+.section-hero__heading {
+  color: #000000;
+  font-family: PT Serif;
+  line-height: 6.9rem;
+  letter-spacing: 0.5px;
+}
+.section-hero__video-thumbnail-wrapper {
+  position: relative;
+  max-width: 65rem;
+  height: 34rem;
+  margin-top: 3.8rem;
+  padding: 2.2rem 4.4rem;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 50px 0px rgba(162, 169, 192, 0.2509803922);
+  border-radius: 5px;
+}
+.section-hero__video-thumbnail {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
