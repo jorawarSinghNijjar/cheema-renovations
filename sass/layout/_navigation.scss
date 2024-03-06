@@ -14,9 +14,11 @@
         &-item{
             font-weight: 600;
             // font-size: 1.8rem;
-            &:hover{
+            a{
+                color:$color-black-1;
+            }
+            a:hover,:active{
                 color:$color-primary;
-                cursor: pointer;
             }
         }
     }

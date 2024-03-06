@@ -11,6 +11,11 @@
   &--primary {
     background-color: $color-primary;
     color:$color-white;
+
+    &:hover{
+      background-color: darken($color-primary, 40%);
+      color:$color-white;
+    }
   }
 }
 

@@ -30,19 +30,192 @@
     letter-spacing: 0.5px;
   }
 
-  &__video-thumbnail-wrapper{
+  &__video-thumbnail-wrapper {
     position: relative;
     max-width: 65rem;
     height: 34rem;
     margin-top: 3.8rem;
     padding: 2.2rem 4.4rem;
     background-color: $color-white;
-    box-shadow: 0px 15px 50px 0px #A2A9C040;
+    box-shadow: 0px 15px 50px 0px #a2a9c040;
     border-radius: 5px;
   }
 
-  &__video-thumbnail{
+  &__video-thumbnail {
     width: 100%;
     height: 100%;
+  }
+}
+
+.section-about {
+  background-color: $color-bg-light;
+  padding: 8.2rem 0 9.7rem 0;
+  box-shadow: 0px -10px 20px 0px #c6c9ea05 inset;
+
+  &__overlap-flex-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__hero-image-wrapper {
+    flex: 0 0 75rem;
+    width: 75rem;
+    height: 49.5rem;
+    padding: 1.1rem 1.7rem;
+    background-color: $color-white;
+    box-shadow: 0px 30px 40px 0px #c9cdda33;
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__heading-box {
+    transform: translateX(-20rem);
+    padding: 7.2rem;
+    min-width: 59rem;
+    max-height: 39rem;
+    background-color: $color-white;
+    box-shadow: 15px 0px 60px 0px #a2a9c026;
+  }
+
+  &__heading {
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    color: $color-text-dark;
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+    color: $color-text-dark;
+  }
+}
+
+.section-services {
+  padding: 8rem 0;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 7rem;
+  }
+
+  &__card-group {
+    margin-bottom: 7rem;
+    text-align: left;
+  }
+
+}
+
+.section-portfolio {
+  padding: 4.5rem 0;
+  background-color: $color-bg-light;
+  box-shadow: 0px -10px 20px 0px #c6c9ea05 inset;
+
+  &__heading {
+    margin-bottom: 1.2rem;
+  }
+
+  &__sub-heading {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.section-reviews {
+  padding: 8rem 0;
+  text-align: center;
+
+  &__sub-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    line-height: 28px;
+  }
+
+  &__heading {
+    margin-bottom: 7rem;
+  }
+}
+
+.section-stats {
+  background-color: $color-black;
+  padding: 8rem 0;
+
+  &__stats-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__stats-card {
+    text-align: center;
+  }
+
+  &__numbers {
+    font-size: 6rem;
+    color: $color-white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 7.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.07em;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+}
+
+.section-contact-us {
+  position: relative;
+  z-index: 10;
+  background-image: url("../../assets/images/contact_us/background-image.png");
+  background-position: center;
+  background-size: cover;
+  padding: 14rem 0;
+  text-align: center;
+
+  &__heading {
+    position: relative;
+    z-index: 30;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 7.4rem;
+    color: $color-white;
+    margin-bottom: 6rem;
+  }
+
+  &__button{
+    position: relative;
+    z-index: 30;
+  }
+}
+
+.overlay {
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+
+.section-faq{
+  padding: 8rem 0;
+
+  &__heading{
+    margin-bottom: 7rem;
   }
 }
