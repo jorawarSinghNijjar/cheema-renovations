@@ -11,18 +11,34 @@
 html {
   /* 62.5% of default 16px = 10px to make 1rem calculations simple*/
   font-size: 62.5%;
- 
-//   @include design(tab-horizontal){
-//     font-size: 56.25%;
-//   }
-//   @include design(tab-portrait){
-//     font-size: 50%;
-//   }
 
-//    @include design(big-desktop){
-//     font-size: 75%;
-//   }
-  
+  // @include design(3xl){
+  //   font-size: 70%;
+  // }
+ 
+  @include design(2xl){
+    font-size: 62.5%;
+  }
+
+  @include design(xl){
+    font-size: 55%;
+  }
+
+  //  @include design(lg){
+  //   font-size: 50%;
+  // }
+
+  // @include design(md){
+  //   font-size: 45%;
+  // }
+
+  // @include design(sm){
+  //   font-size: 40%;
+  // }
+
+  // @include design(xs){
+  //   font-size: 35%;
+  // }
   
 }
 

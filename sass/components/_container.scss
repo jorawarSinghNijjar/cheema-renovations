@@ -1,4 +1,13 @@
 .container{
-    max-width: 118rem;
+    max-width: 134rem;
+    // width: 88%;
     margin: 0 auto;
+
+    @include design(3xl){
+        max-width: 118rem;
+    }
+
+    @include design(2xl){
+        max-width: 90rem;
+    }
 }

@@ -4,3 +4,31 @@
     left:50%;
     transform: translate(-50%,-50%);
 }
+
+//Media Queries
+// 1em = 16px
+@mixin design($device-size){
+
+    @if($device-size == xs){
+        @media only screen and (max-width: 25em) {@content};  //400px
+    }
+    @if($device-size == sm){
+        @media only screen and (max-width: 35.5em) {@content};  //568px
+    }
+    @if($device-size == md){
+        @media only screen and (max-width: 40em) {@content};  //640px
+    }
+    @if($device-size == lg){
+        @media only screen and (max-width: 50em) {@content};  //800px
+    }
+    @if($device-size == xl){
+        @media only screen and (max-width: 56.25em) {@content};  //900px
+    }
+    @if($device-size == 2xl){
+        @media only screen and (max-width: 64em) {@content};  //1024px
+    }
+    @if($device-size == 3xl){
+        @media only screen and (max-width: 83.75em) {@content};  //1340px
+    }
+}
+

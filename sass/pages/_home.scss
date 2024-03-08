@@ -8,7 +8,14 @@
     position: absolute;
     right: 0;
     top: 0;
-    max-width: 100rem;
+    max-width: $container-max-w-default;
+    @include design(3xl) {
+      max-width: $container-max-w-3xl;
+    }
+
+    @include design(3xl) {
+      max-width: $container-max-w-2xl;
+    }
     max-height: 63rem;
   }
 
@@ -109,7 +116,6 @@
     margin-bottom: 7rem;
     text-align: left;
   }
-
 }
 
 .section-portfolio {
@@ -196,7 +202,7 @@
     margin-bottom: 6rem;
   }
 
-  &__button{
+  &__button {
     position: relative;
     z-index: 30;
   }
@@ -212,10 +218,10 @@
   left: 0;
 }
 
-.section-faq{
+.section-faq {
   padding: 8rem 0;
 
-  &__heading{
+  &__heading {
     margin-bottom: 7rem;
   }
 }
