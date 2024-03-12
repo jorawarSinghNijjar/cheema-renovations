@@ -3,20 +3,26 @@
   padding-top: 7.8rem;
   padding-bottom: 6.8rem;
 
+  @include design(2xl) {
+    padding-top: 3rem;
+  }
+
   &__hero-image-wrapper {
     z-index: -10;
     position: absolute;
     right: 0;
     top: 0;
     max-width: $container-max-w-default;
+    max-height: 63rem;
+
     @include design(3xl) {
       max-width: $container-max-w-3xl;
     }
 
-    @include design(3xl) {
-      max-width: $container-max-w-2xl;
+    @include design(2xl) {
+      max-width: calc(0.7 * $container-max-w-2xl);
     }
-    max-height: 63rem;
+ 
   }
 
   &__hero-image {
@@ -33,8 +39,17 @@
   &__heading {
     color: $color-black;
     font-family: PT Serif;
-    line-height: 6.9rem;
+    line-height: 7.5rem;
     letter-spacing: 0.5px;
+
+    @include design(3xl) {
+      line-height: 6.9rem;
+    }
+
+    @include design(2xl) {
+      line-height: 5.9rem;
+      max-width: 60rem;
+    }
   }
 
   &__video-thumbnail-wrapper {
@@ -42,15 +57,23 @@
     max-width: 65rem;
     height: 34rem;
     margin-top: 3.8rem;
-    padding: 2.2rem 4.4rem;
+    padding: 2.2rem;
     background-color: $color-white;
     box-shadow: 0px 15px 50px 0px #a2a9c040;
     border-radius: 5px;
+   
+
+    @include design(2xl) {
+      max-width: 40rem;
+      height: auto;
+      padding: 1rem 1rem;
+    }
   }
 
   &__video-thumbnail {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -60,18 +83,25 @@
   box-shadow: 0px -10px 20px 0px #c6c9ea05 inset;
 
   &__overlap-flex-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    position: relative;
   }
 
   &__hero-image-wrapper {
-    flex: 0 0 75rem;
-    width: 75rem;
-    height: 49.5rem;
+    max-width: calc(0.7 * $container-max-w-default);
+    width: 80%;
     padding: 1.1rem 1.7rem;
     background-color: $color-white;
     box-shadow: 0px 30px 40px 0px #c9cdda33;
+
+    @include design(3xl) {
+      max-width: calc(0.7 * $container-max-w-3xl);
+    }
+
+    @include design(2xl) {
+      max-width: 100%;
+      width: 100%;
+      box-shadow: none;
+    }
   }
 
   &__hero-image {
@@ -80,12 +110,27 @@
   }
 
   &__heading-box {
-    transform: translateX(-20rem);
+    position: absolute;
+    right: 0%;
+    top:50%;
+    transform: translateY(-50%);
     padding: 7.2rem;
-    min-width: 59rem;
-    max-height: 39rem;
+    // min-width: 59rem;
+    max-width: calc(0.45 * $container-max-w-default);
+    max-height: 80%;
     background-color: $color-white;
     box-shadow: 15px 0px 60px 0px #a2a9c026;
+
+    @include design(3xl) {
+      max-width: calc(0.45 * $container-max-w-3xl);
+    }
+
+    @include design(2xl) {
+      transform: translateY(0%);
+      position: relative;
+      max-width: 100%;
+      margin-top: 3rem;
+    }
   }
 
   &__heading {
@@ -115,6 +160,7 @@
   &__card-group {
     margin-bottom: 7rem;
     text-align: left;
+    justify-content: space-evenly;
   }
 }
 
@@ -148,6 +194,10 @@
   &__heading {
     margin-bottom: 7rem;
   }
+
+  &__card-group{
+    justify-content: space-evenly;
+  }
 }
 
 .section-stats {
@@ -158,6 +208,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include design(md){
+      flex-direction: column;
+      gap: 8rem;
+    }
   }
 
   &__stats-card {

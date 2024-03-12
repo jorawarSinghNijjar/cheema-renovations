@@ -21,5 +21,9 @@
                 color:$color-primary;
             }
         }
+
+        @include design(2xl) {
+            display: none;
+        }
     }
 }

@@ -1,5 +1,5 @@
 .accordion {
-  max-height: 20rem;
+  max-height: 100rem;
 
   &-group {
     max-width: 98rem;
@@ -41,10 +41,11 @@
   }
 
   &-toggle-icon {
-    width: 2.8rem;
+    min-width: 2.8rem;
     height: 2.8rem;
     background: url("https://jorawarsinghnijjar.github.io/cheema-renovations/assets/images/faq/plus-icon.svg");
     background-size: contain;
+    background-repeat: no-repeat;
 
     &.active{
         background: url("https://jorawarsinghnijjar.github.io/cheema-renovations/assets/images/faq/minus-icon.svg");

@@ -17,6 +17,12 @@
       color:$color-white;
     }
   }
+
+  @include design(2xl) {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+  }
+
 }
 
 .play-button{
@@ -42,5 +48,11 @@
         @include center-vh;
         font-size: 2rem;
         color: $color-white;
+    }
+
+
+    @include design(2xl) {
+      width: 5rem;
+      height: 5rem;
     }
 }

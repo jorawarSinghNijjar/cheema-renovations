@@ -3,6 +3,13 @@
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 20rem 16rem 11rem 6rem 22rem;
+
+  @include design(2xl) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .grid-item {
@@ -46,4 +53,9 @@
   &--7 {
     grid-column: 3 / span 1;
   }
+
+  // @include design(xl) {
+  //   flex-basis: 100%;
+  // }
+  
 }

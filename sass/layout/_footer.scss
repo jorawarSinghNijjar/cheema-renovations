@@ -11,6 +11,11 @@ footer {
   font-family: "Nunito", sans-serif;
   color: $color-text-light;
 
+  @include design(lg){
+    flex-direction: column;
+    gap: 8rem;
+  }
+
   h6 {
     font-family: "Nunito", sans-serif;
     font-size: 1.8rem;

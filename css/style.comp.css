@@ -23,12 +23,25 @@
 .nav__list-item a:hover, .nav__list-item :active {
   color: #FF6400;
 }
+@media only screen and (max-width: 64em) {
+  .nav__list {
+    display: none;
+  }
+}
 
 .grid {
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 20rem 16rem 11rem 6rem 22rem;
+}
+@media only screen and (max-width: 64em) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .grid-item__image {
@@ -78,6 +91,12 @@ footer {
   font-family: "Nunito", sans-serif;
   color: #C7C7C7;
 }
+@media only screen and (max-width: 50em) {
+  .footer-block {
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
 .footer-block h6 {
   font-family: "Nunito", sans-serif;
   font-size: 1.8rem;
@@ -116,8 +135,18 @@ footer {
 }
 
 .container {
-  max-width: 118rem;
+  max-width: 134rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 83.75em) {
+  .container {
+    max-width: 118rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .container {
+    max-width: 88%;
+  }
 }
 
 .button {
@@ -137,6 +166,12 @@ footer {
 .button--primary:hover {
   background-color: #331400;
   color: #ffffff;
+}
+@media only screen and (max-width: 64em) {
+  .button {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+  }
 }
 
 .play-button {
@@ -166,6 +201,12 @@ footer {
   transform: translate(-50%, -50%);
   font-size: 2rem;
   color: #ffffff;
+}
+@media only screen and (max-width: 64em) {
+  .play-button {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .card-group {
@@ -219,7 +260,7 @@ footer {
 }
 
 .accordion {
-  max-height: 20rem;
+  max-height: 100rem;
 }
 .accordion-group {
   max-width: 98rem;
@@ -252,10 +293,11 @@ footer {
   color: #151212;
 }
 .accordion-toggle-icon {
-  width: 2.8rem;
+  min-width: 2.8rem;
   height: 2.8rem;
   background: url("https://jorawarsinghnijjar.github.io/cheema-renovations/assets/images/faq/plus-icon.svg");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .accordion-toggle-icon.active {
   background: url("https://jorawarsinghnijjar.github.io/cheema-renovations/assets/images/faq/minus-icon.svg");
@@ -284,6 +326,16 @@ html {
   /* 62.5% of default 16px = 10px to make 1rem calculations simple*/
   font-size: 62.5%;
 }
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -311,8 +363,18 @@ h6 {
 }
 
 h1 {
-  font-size: 5.2rem;
+  font-size: 6.2rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 83.75em) {
+  h1 {
+    font-size: 5.2rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  h1 {
+    font-size: 4.8rem;
+  }
 }
 
 h2 {
@@ -342,13 +404,28 @@ a:any-link {
   padding-top: 7.8rem;
   padding-bottom: 6.8rem;
 }
+@media only screen and (max-width: 64em) {
+  .section-hero {
+    padding-top: 3rem;
+  }
+}
 .section-hero__hero-image-wrapper {
   z-index: -10;
   position: absolute;
   right: 0;
   top: 0;
-  max-width: 100rem;
+  max-width: 134rem;
   max-height: 63rem;
+}
+@media only screen and (max-width: 83.75em) {
+  .section-hero__hero-image-wrapper {
+    max-width: 118rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .section-hero__hero-image-wrapper {
+    max-width: 63rem;
+  }
 }
 .section-hero__hero-image {
   height: 100%;
@@ -362,22 +439,41 @@ a:any-link {
 .section-hero__heading {
   color: #151212;
   font-family: PT Serif;
-  line-height: 6.9rem;
+  line-height: 7.5rem;
   letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 83.75em) {
+  .section-hero__heading {
+    line-height: 6.9rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .section-hero__heading {
+    line-height: 5.9rem;
+    max-width: 60rem;
+  }
 }
 .section-hero__video-thumbnail-wrapper {
   position: relative;
   max-width: 65rem;
   height: 34rem;
   margin-top: 3.8rem;
-  padding: 2.2rem 4.4rem;
+  padding: 2.2rem;
   background-color: #ffffff;
   box-shadow: 0px 15px 50px 0px rgba(162, 169, 192, 0.2509803922);
   border-radius: 5px;
 }
+@media only screen and (max-width: 64em) {
+  .section-hero__video-thumbnail-wrapper {
+    max-width: 40rem;
+    height: auto;
+    padding: 1rem 1rem;
+  }
+}
 .section-hero__video-thumbnail {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .section-about {
@@ -386,29 +482,54 @@ a:any-link {
   box-shadow: 0px -10px 20px 0px rgba(198, 201, 234, 0.0196078431) inset;
 }
 .section-about__overlap-flex-box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  position: relative;
 }
 .section-about__hero-image-wrapper {
-  flex: 0 0 75rem;
-  width: 75rem;
-  height: 49.5rem;
+  max-width: 93.8rem;
+  width: 80%;
   padding: 1.1rem 1.7rem;
   background-color: #ffffff;
   box-shadow: 0px 30px 40px 0px rgba(201, 205, 218, 0.2);
+}
+@media only screen and (max-width: 83.75em) {
+  .section-about__hero-image-wrapper {
+    max-width: 82.6rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .section-about__hero-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    box-shadow: none;
+  }
 }
 .section-about__hero-image {
   width: 100%;
   height: 100%;
 }
 .section-about__heading-box {
-  transform: translateX(-20rem);
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 7.2rem;
-  min-width: 59rem;
-  max-height: 39rem;
+  max-width: 60.3rem;
+  max-height: 80%;
   background-color: #ffffff;
   box-shadow: 15px 0px 60px 0px rgba(162, 169, 192, 0.1490196078);
+}
+@media only screen and (max-width: 83.75em) {
+  .section-about__heading-box {
+    max-width: 53.1rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .section-about__heading-box {
+    transform: translateY(0%);
+    position: relative;
+    max-width: 100%;
+    margin-top: 3rem;
+  }
 }
 .section-about__heading {
   line-height: 35px;
@@ -434,6 +555,7 @@ a:any-link {
 .section-services__card-group {
   margin-bottom: 7rem;
   text-align: left;
+  justify-content: space-evenly;
 }
 
 .section-portfolio {
@@ -463,6 +585,9 @@ a:any-link {
 .section-reviews__heading {
   margin-bottom: 7rem;
 }
+.section-reviews__card-group {
+  justify-content: space-evenly;
+}
 
 .section-stats {
   background-color: #151212;
@@ -472,6 +597,12 @@ a:any-link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media only screen and (max-width: 40em) {
+  .section-stats__stats-group {
+    flex-direction: column;
+    gap: 8rem;
+  }
 }
 .section-stats__stats-card {
   text-align: center;
