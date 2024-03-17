@@ -69,7 +69,7 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.(png|jpe?g|gif)$/i,
+          test: /\.(png|jpe?g|gif|svg)$/i,
           loader: "file-loader",
           options: {
             outputPath: path.resolve(__dirname, "dist/public"),

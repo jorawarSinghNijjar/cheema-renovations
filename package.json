@@ -4,8 +4,8 @@
   "description": "website",
   "private": "true",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack --env production"
+    "start": "webpack serve --stats-error-details",
+    "build": "webpack --env production --stats-error-details"
   },
   "author": "ebnite",
   "license": "ISC",
