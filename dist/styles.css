@@ -225,6 +225,33 @@ footer {
   letter-spacing: 0em;
   text-align: left;
 }
+.button__icon {
+  margin-right: 2rem;
+}
+.button__link:link, .button__link:visited, area[href].button__link {
+  background-color: #FF6400;
+  color: #ffffff;
+}
+.button__link:-moz-any-link {
+  background-color: #FF6400;
+  color: #ffffff;
+}
+.button__link:any-link {
+  background-color: #FF6400;
+  color: #ffffff;
+}
+.button__link:link:hover, .button__link:visited:hover, area[href].button__link:hover {
+  background-color: #331400;
+  color: #ffffff;
+}
+.button__link:-moz-any-link:hover {
+  background-color: #331400;
+  color: #ffffff;
+}
+.button__link:any-link:hover {
+  background-color: #331400;
+  color: #ffffff;
+}
 .button--primary {
   background-color: #FF6400;
   color: #ffffff;

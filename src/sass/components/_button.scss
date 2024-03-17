@@ -8,6 +8,20 @@
   letter-spacing: 0em;
   text-align: left;
 
+  &__icon{
+    margin-right:2rem;
+  }
+
+  &__link:any-link {
+    background-color: $color-primary;
+    color:$color-white;
+
+    &:hover{
+      background-color: darken($color-primary, 40%);
+      color:$color-white;
+    }
+  }
+
   &--primary {
     background-color: $color-primary;
     color:$color-white;
