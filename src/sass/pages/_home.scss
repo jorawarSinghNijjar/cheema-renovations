@@ -1,0 +1,357 @@
+.section-hero {
+  position: relative;
+  padding-top: 7.8rem;
+  padding-bottom: 6.8rem;
+
+  @include design(2xl) {
+    padding-top: 3rem;
+  }
+
+  @include design(xl) {
+    padding-top: 15rem;
+  }
+
+  @include design(xs) {
+    padding-top: 12rem;
+  }
+
+  .container {
+    @include design(md) {
+      min-height: 64rem;
+    }
+  }
+
+  &__hero-image-wrapper {
+    z-index: -10;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: $container-max-w-default;
+    max-height: 63rem;
+
+    @include design(3xl) {
+      max-width: $container-max-w-3xl;
+    }
+
+    @include design(2xl) {
+      max-width: calc(0.7 * $container-max-w-2xl);
+    }
+
+    @include design(xl) {
+      max-width: $container-max-w-xl;
+      max-height: 100vh;
+      min-height: 70rem;
+      top: 0;
+    }
+  }
+
+  &__hero-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @include design(2xl) {
+      object-position: right;
+    }
+
+    @include design(xl) {
+      min-height: 100vh;
+    }
+
+    @include design(lg) {
+      object-position: center;
+    }
+
+    @include design(md) {
+      min-height: 100vh;
+    }
+  }
+
+  &__heading-wrapper {
+    max-width: 67rem;
+    margin-bottom: 3.8rem;
+  }
+
+  &__heading {
+    color: $color-black;
+    font-family: PT Serif;
+    line-height: 7.5rem;
+    letter-spacing: 0.5px;
+
+    @include design(3xl) {
+      line-height: 6.9rem;
+    }
+
+    @include design(2xl) {
+      line-height: 5.9rem;
+      max-width: 60rem;
+    }
+
+    @include design(md) {
+      max-width: 70%;
+    }
+
+    @include design(sm) {
+      max-width: 80%;
+      line-height: 150%;
+    }
+
+    @include design(xs) {
+      max-width: 100%;
+    }
+  }
+
+  &__video-thumbnail-wrapper {
+    position: relative;
+    max-width: 65rem;
+    height: 34rem;
+    margin-top: 3.8rem;
+    padding: 2.2rem;
+    background-color: $color-white;
+    box-shadow: 0px 15px 50px 0px #a2a9c040;
+    border-radius: 5px;
+
+    @include design(2xl) {
+      max-width: 40rem;
+      height: auto;
+      padding: 1rem 1rem;
+    }
+
+    @include design(md) {
+      display: none;
+    }
+
+    &--md {
+      position: relative;
+      max-width: 93%;
+      margin: 0 auto;
+      height: 34rem;
+      padding: 1.5rem;
+      background-color: $color-white;
+      box-shadow: 0px 15px 50px 0px #a2a9c040;
+      border-radius: 5px;
+
+      @media only screen and (min-width: 40em) {
+        display: none;
+      }
+    }
+  }
+
+  &__video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.section-about {
+  background-color: $color-bg-light;
+  padding: 8.2rem 0 9.7rem 0;
+  box-shadow: 0px -10px 20px 0px #c6c9ea05 inset;
+
+  &__overlap-flex-box {
+    position: relative;
+  }
+
+  &__hero-image-wrapper {
+    max-width: calc(0.7 * $container-max-w-default);
+    width: 80%;
+    padding: 1.1rem 1.7rem;
+    background-color: $color-white;
+    box-shadow: 0px 30px 40px 0px #c9cdda33;
+
+    @include design(3xl) {
+      max-width: calc(0.7 * $container-max-w-3xl);
+    }
+
+    @include design(2xl) {
+      max-width: 100%;
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__heading-box {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 7.2rem;
+    // min-width: 59rem;
+    max-width: calc(0.45 * $container-max-w-default);
+    max-height: 80%;
+    background-color: $color-white;
+    box-shadow: 15px 0px 60px 0px #a2a9c026;
+
+    @include design(3xl) {
+      max-width: calc(0.45 * $container-max-w-3xl);
+    }
+
+    @include design(2xl) {
+      transform: translateY(0%);
+      position: relative;
+      max-width: 100%;
+      margin-top: 3rem;
+    }
+
+    @include design(md) {
+      padding: 5rem;
+    }
+  }
+
+  &__heading {
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    color: $color-text-dark;
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+    color: $color-text-dark;
+  }
+}
+
+.section-services {
+  padding: 8rem 0;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 7rem;
+  }
+
+  &__card-group {
+    margin-bottom: 7rem;
+    text-align: left;
+    justify-content: space-evenly;
+
+    @include design(lg) {
+      text-align: center;
+    }
+  }
+}
+
+.section-portfolio {
+  padding: 4.5rem 0;
+  background-color: $color-bg-light;
+  box-shadow: 0px -10px 20px 0px #c6c9ea05 inset;
+
+  &__heading {
+    margin-bottom: 1.2rem;
+  }
+
+  &__sub-heading {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.section-reviews {
+  padding: 8rem 0;
+  text-align: center;
+
+  &__sub-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    line-height: 28px;
+  }
+
+  &__heading {
+    margin-bottom: 7rem;
+  }
+
+  &__card-group {
+    justify-content: space-evenly;
+  }
+}
+
+.section-stats {
+  background-color: $color-black;
+  padding: 8rem 0;
+
+  &__stats-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include design(md) {
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  &__stats-card {
+    text-align: center;
+  }
+
+  &__numbers {
+    font-size: 6rem;
+    color: $color-white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 7.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.07em;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+}
+
+.section-contact-us {
+  position: relative;
+  z-index: 10;
+  background-image: url("https://ik.imagekit.io/zkz3xepw7/cheema-renovations/images/contact_us/background-image.png?updatedAt=1709845283949");
+  background-position: center;
+  background-size: cover;
+  padding: 14rem 0;
+  text-align: center;
+
+  &__heading {
+    position: relative;
+    z-index: 30;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 7.4rem;
+    color: $color-white;
+    margin-bottom: 6rem;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 30;
+  }
+}
+
+.overlay {
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+
+.section-faq {
+  padding: 8rem 0;
+
+  &__heading {
+    margin-bottom: 7rem;
+  }
+}

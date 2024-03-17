@@ -1,0 +1,18 @@
+.container{
+    max-width: 134rem;
+    // width: 88%;
+    margin: 0 auto;
+
+    @include design(3xl){
+        max-width: 118rem;
+    }
+
+    @include design(2xl){
+        max-width: 88%;
+    }
+
+
+    @include design(sm){
+        max-width: 93%;
+    }
+}
