@@ -5,7 +5,7 @@
   "private": "true",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack --env production"
   },
   "author": "ebnite",
   "license": "ISC",
