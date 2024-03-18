@@ -53,17 +53,17 @@ $(window).on("load", function () {
         easing: "cubicBezier(.5, .05, .1, .3)",
       },
     })
-    .add({
-      targets: ".section-hero__video-thumbnail-wrapper",
-      opacity: [0, 1],
-      translateX: {
-        value: ["-20%", "0%"],
-        duration: 1000,
-        easing: "cubicBezier(.5, .05, .1, .3)",
-      },
-      duration: 1000,
-      easing: "cubicBezier(.5,.05,.1,.3)",
-    });
+    // .add({
+    //   targets: ".section-hero__video-thumbnail-wrapper",
+    //   opacity: [0, 1],
+    //   translateX: {
+    //     value: ["-20%", "0%"],
+    //     duration: 1000,
+    //     easing: "cubicBezier(.5, .05, .1, .3)",
+    //   },
+    //   duration: 1000,
+    //   easing: "cubicBezier(.5,.05,.1,.3)",
+    // });
 });
 
 // Function to check if the screen size is greater than 64em

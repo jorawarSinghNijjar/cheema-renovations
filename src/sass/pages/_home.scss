@@ -3,6 +3,7 @@
   position: relative;
   padding-top: 7.8rem;
   padding-bottom: 6.8rem;
+  min-height: 90vh; // If not video thumbnail
 
   @include design(2xl) {
     padding-top: 3rem;
@@ -22,13 +23,20 @@
     }
   }
 
+  .button {
+    opacity: 0; // for animation purposes
+  }
+
   &__hero-image-wrapper {
+    opacity: 0; // for animation purposes
+
     z-index: -10;
     position: absolute;
     right: 0;
     top: 0;
     max-width: $container-max-w-default;
     max-height: 63rem;
+   
 
     @include design(3xl) {
       max-width: $container-max-w-3xl;
@@ -82,7 +90,10 @@
     }
   }
 
+
   &__heading {
+    // opacity: 0; // for animation purposes
+
     color: $color-black;
     font-family: PT Serif;
     line-height: 9.5rem;
@@ -112,6 +123,8 @@
   }
 
   &__video-thumbnail-wrapper {
+    display: none; // No video thumbnail for now
+
     position: relative;
     max-width: 65rem;
     height: 34rem;
