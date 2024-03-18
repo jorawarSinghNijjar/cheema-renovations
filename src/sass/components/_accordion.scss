@@ -38,6 +38,10 @@
     font-size: 2.2rem;
     font-weight: 700;
     color: $color-black;
+
+    @include design(sm){
+      font-size: 1.8rem;
+    }
   }
 
   &-toggle-icon {

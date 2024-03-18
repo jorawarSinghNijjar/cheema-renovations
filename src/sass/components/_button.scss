@@ -1,4 +1,6 @@
 .button {
+  display: block;
+  max-width: max-content;
   padding: 2rem;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -6,7 +8,7 @@
   font-weight: 500;
   line-height: 2.8rem;
   letter-spacing: 0em;
-  text-align: left;
+
 
   &__icon{
     margin-right:2rem;

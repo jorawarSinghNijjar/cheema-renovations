@@ -68,14 +68,23 @@
   }
 
   &__heading-wrapper {
-    max-width: 67rem;
-    margin-bottom: 3.8rem;
+    max-width: 80rem;
+    margin-bottom: 7.8rem;
+
+    @include design(3xl) {
+      max-width: 67rem;
+      margin-bottom: 10rem;
+    }
+
+    @include design(3xl) {
+      margin-bottom: 3.8rem;
+    }
   }
 
   &__heading {
     color: $color-black;
     font-family: PT Serif;
-    line-height: 7.5rem;
+    line-height: 9.5rem;
     letter-spacing: 0.5px;
 
     @include design(3xl) {
@@ -105,16 +114,21 @@
     position: relative;
     max-width: 65rem;
     height: 34rem;
-    margin-top: 3.8rem;
+    margin-top: 15rem;
     padding: 2.2rem;
     background-color: $color-white;
     box-shadow: 0px 15px 50px 0px #a2a9c040;
     border-radius: 5px;
 
+    @include design(3xl) {
+      margin-top: 10rem;
+    }
+
     @include design(2xl) {
       max-width: 40rem;
       height: auto;
       padding: 1rem 1rem;
+      margin-top: 3.8rem;
     }
 
     @include design(md) {
@@ -233,9 +247,13 @@
     text-align: left;
     justify-content: space-evenly;
 
-    @include design(lg) {
-      text-align: center;
-    }
+    // @include design(lg) {
+    //   text-align: center;
+    // }
+  }
+
+  &__button {
+    margin: 0 auto;
   }
 }
 
@@ -330,11 +348,24 @@
     line-height: 7.4rem;
     color: $color-white;
     margin-bottom: 6rem;
+
+    @include design(sm) {
+      font-size: 5rem;
+      font-weight: 600;
+      line-height: 165%;
+    }
+
+    @include design(xs) {
+      font-size: 3.5rem;
+      font-weight: 500;
+      line-height: 165%;
+    }
   }
 
   &__button {
     position: relative;
     z-index: 30;
+    margin: 0 auto;
   }
 }
 

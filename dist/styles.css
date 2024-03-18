@@ -216,6 +216,10 @@ footer {
 }
 
 .button {
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   padding: 2rem;
   border: none;
   font-family: "Poppins", sans-serif;
@@ -223,7 +227,6 @@ footer {
   font-weight: 500;
   line-height: 2.8rem;
   letter-spacing: 0em;
-  text-align: left;
 }
 .button__icon {
   margin-right: 2rem;
@@ -330,6 +333,12 @@ footer {
   height: 7rem;
   margin-right: 2rem;
 }
+@media only screen and (max-width: 40em) {
+  .text-card__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .text-card__icon img {
   width: 100%;
   height: 100%;
@@ -425,6 +434,11 @@ footer {
   font-size: 2.2rem;
   font-weight: 700;
   color: #151212;
+}
+@media only screen and (max-width: 35.5em) {
+  .accordion-header {
+    font-size: 1.8rem;
+  }
 }
 .accordion-toggle-icon {
   min-width: 2.8rem;
@@ -672,7 +686,7 @@ h6 {
 }
 
 h1 {
-  font-size: 6.2rem;
+  font-size: 7.2rem;
   font-weight: 700;
 }
 @media only screen and (max-width: 83.75em) {
@@ -694,6 +708,11 @@ h1 {
 h2 {
   font-size: 4.6rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 35.5em) {
+  h2 {
+    font-size: 3.6rem;
+  }
 }
 
 h3 {
@@ -806,13 +825,24 @@ a:any-link {
   }
 }
 .section-hero__heading-wrapper {
-  max-width: 67rem;
-  margin-bottom: 3.8rem;
+  max-width: 80rem;
+  margin-bottom: 7.8rem;
+}
+@media only screen and (max-width: 83.75em) {
+  .section-hero__heading-wrapper {
+    max-width: 67rem;
+    margin-bottom: 10rem;
+  }
+}
+@media only screen and (max-width: 83.75em) {
+  .section-hero__heading-wrapper {
+    margin-bottom: 3.8rem;
+  }
 }
 .section-hero__heading {
   color: #151212;
   font-family: PT Serif;
-  line-height: 7.5rem;
+  line-height: 9.5rem;
   letter-spacing: 0.5px;
 }
 @media only screen and (max-width: 83.75em) {
@@ -846,18 +876,24 @@ a:any-link {
   position: relative;
   max-width: 65rem;
   height: 34rem;
-  margin-top: 3.8rem;
+  margin-top: 15rem;
   padding: 2.2rem;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 15px 50px 0px rgba(162, 169, 192, 0.2509803922);
           box-shadow: 0px 15px 50px 0px rgba(162, 169, 192, 0.2509803922);
   border-radius: 5px;
 }
+@media only screen and (max-width: 83.75em) {
+  .section-hero__video-thumbnail-wrapper {
+    margin-top: 10rem;
+  }
+}
 @media only screen and (max-width: 64em) {
   .section-hero__video-thumbnail-wrapper {
     max-width: 40rem;
     height: auto;
     padding: 1rem 1rem;
+    margin-top: 3.8rem;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -982,10 +1018,8 @@ a:any-link {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-@media only screen and (max-width: 50em) {
-  .section-services__card-group {
-    text-align: center;
-  }
+.section-services__button {
+  margin: 0 auto;
 }
 
 .section-portfolio {
@@ -1085,9 +1119,24 @@ a:any-link {
   color: #ffffff;
   margin-bottom: 6rem;
 }
+@media only screen and (max-width: 35.5em) {
+  .section-contact-us__heading {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 165%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .section-contact-us__heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 165%;
+  }
+}
 .section-contact-us__button {
   position: relative;
   z-index: 30;
+  margin: 0 auto;
 }
 
 .overlay {
