@@ -1,6 +1,8 @@
 import "./sass/main.scss";
+import anime from "animejs/lib/anime.es.js";
 import { paperMenu } from "./menu.js";
 import { animateValue } from "./statsAnimation.js";
+import { onReveal, playAnimation } from "./onReveal.js";
 
 // import  Avatar1 from "../public/assets/images/reviews/avatars/1.jpg";
 // import  Avatar2 from "../public/assets/images/reviews/avatars/2.jpg";
@@ -16,18 +18,237 @@ import { animateValue } from "./statsAnimation.js";
 // import  Avatar3 from "https://ik.imagekit.io/zkz3xepw7/cheema-renovations/images/reviewers/3.jpg";
 // import  Avatar4 from "https://ik.imagekit.io/zkz3xepw7/cheema-renovations/images/reviewers/4.jpg";
 
-// -----------------------------------------------------Paper Menu----------------------------------------------------
-
-
-// console.log("Hello from index.js");
-
 $(window).on("load", function () {
+  // -----------------------------------------------------Paper Menu----------------------------------------------------
   paperMenu.init();
+
+  // -----------------------------------------------------Onload Animations----------------------------------------------------
+  var timeline = anime.timeline({ direction: "normal" });
+  var textWrapper = document.querySelector(".section-hero__heading");
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
+  timeline
+    .add({
+      targets: ".section-hero__hero-image-wrapper",
+      opacity: {
+        value: [0, 1],
+        duration: 1000,
+        easing: "cubicBezier(.5, .05, .1, .3)",
+      },
+    })
+    .add({
+      targets: ".section-hero__heading .letter",
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 500,
+      delay: (el, i) => 30 * (i + 1),
+    })
+    .add({
+      targets: ".section-hero__button",
+      opacity: {
+        value: [0, 1],
+        duration: 1000,
+        easing: "cubicBezier(.5, .05, .1, .3)",
+      },
+    })
+    .add({
+      targets: ".section-hero__video-thumbnail-wrapper",
+      opacity: [0, 1],
+      translateX: {
+        value: ["-20%", "0%"],
+        duration: 1000,
+        easing: "cubicBezier(.5, .05, .1, .3)",
+      },
+      duration: 1000,
+      easing: "cubicBezier(.5,.05,.1,.3)",
+    });
 });
 
+// Function to check if the screen size is greater than 64em
+function isScreenSizeGreaterThan64em() {
+  return window.matchMedia("(min-width: 64em)").matches;
+}
+
+// Function to run the animation
+
+onReveal(".section-about__overlap-flex-box", () => {
+  var overlapBoxTimeline = anime.timeline({ direction: "normal" });
+
+  if (isScreenSizeGreaterThan64em()) {
+    overlapBoxTimeline
+      .add({
+        targets: ".section-about__hero-image-wrapper",
+        opacity: {
+          value: [0, 1],
+          duration: 800,
+          easing: "cubicBezier(.5,.05,.1,.3)",
+        },
+        scale: {
+          value: [0.5, 1],
+          duration: 800,
+          easing: "cubicBezier(.5,.05,.1,.3)",
+        },
+      })
+      .add({
+        targets: ".section-about__heading-box",
+        opacity: 1,
+        translateX: {
+          value: ["-100%", "40%"],
+          duration: 700,
+          easing: "easeOutQuad",
+        },
+        translateY: {
+          value: ["-50%", "-50%"],
+          duration: 700,
+          easing: "easeOutQuad",
+        },
+      })
+      .add({
+        targets: ".section-about__heading-box",
+        zIndex: {
+          value: 2,
+          duration: 100,
+        },
+      })
+      .add({
+        targets: ".section-about__heading-box",
+        translateX: {
+          value: ["40%", "0%"],
+          duration: 600,
+          easing: "easeInCubic",
+        },
+        translateY: {
+          value: ["-50%", "-50%"],
+          duration: 600,
+          easing: "easeInCubic",
+        },
+      });
+  } else {
+    console.log("less than 64em");
+    overlapBoxTimeline
+      .add({
+        targets: ".section-about__hero-image-wrapper",
+        opacity: {
+          value: [0, 1],
+          duration: 800,
+          easing: "cubicBezier(.5,.05,.1,.3)",
+        },
+      })
+      .add({
+        targets: ".section-about__heading-box",
+        opacity: {
+          value: [0, 1],
+          duration: 800,
+          easing: "cubicBezier(.5,.05,.1,.3)",
+        },
+      });
+  }
+});
+
+onReveal(".section-services", () => {
+  console.log("here");
+  var textCardTimeline = anime.timeline({ direction: "normal" });
+  textCardTimeline
+    .add({
+      targets: ".section-services__heading",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    })
+    .add({
+      targets: ".text-card",
+      scale: {
+        value: ["50%", "100%"],
+        duration: 1000,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+      opacity: {
+        value: [0, 1],
+        duration: 1000,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+      delay: anime.stagger(200),
+    })
+    .add({
+      targets: ".section-services__button",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    });
+});
+
+onReveal(".section-reviews__heading", () => {
+  var reviewsTimeline = anime.timeline({ direction: "normal" });
+  reviewsTimeline
+    .add({
+      targets: ".section-reviews__sub-heading",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    })
+    .add({
+      targets: ".section-reviews__heading",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    })
+
+    .add({
+      targets: ".review-card",
+      opacity: {
+        value: [0, 1],
+        duration: 800,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+      delay: anime.stagger(200),
+    });
+});
+
+onReveal(".section-portfolio__heading", () => {
+  var portfolioTimeline = anime.timeline({ direction: "normal" });
+  portfolioTimeline
+    .add({
+      targets: ".section-portfolio__heading",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    })
+    .add({
+      targets: ".section-portfolio__sub-heading",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+    })
+    .add({
+      targets: ".grid-item",
+      opacity: {
+        value: [0, 1],
+        duration: 500,
+        easing: "cubicBezier(.5,.05,.1,.3)",
+      },
+      delay: anime.stagger(200),
+    });
+});
+
+// Remove letter spans
+// var textWithoutSpans = textWrapper.innerText;
+// textWrapper.innerHTML = textWithoutSpans;
+
 // -----------------------------------------------------Rating----------------------------------------------------
-
-
 
 const ratingCardGroup = document.getElementById("rating-card-group");
 
@@ -134,18 +355,19 @@ for (let i = 0; i < acc.length; i++) {
     const currentAccordion = e.currentTarget;
     const currentAccordionBody = currentAccordion.nextElementSibling;
     const currentAccordionIcon = currentAccordion.children[1];
-    
+
     // Toggle active class for the clicked accordion item
     currentAccordion.classList.toggle("active");
     currentAccordionIcon.classList.toggle("active");
-    
+
     // Toggle maxHeight for the clicked accordion item's body
     if (currentAccordionBody.style.maxHeight) {
       currentAccordionBody.style.maxHeight = null;
     } else {
-      currentAccordionBody.style.maxHeight = currentAccordionBody.scrollHeight + "px";
+      currentAccordionBody.style.maxHeight =
+        currentAccordionBody.scrollHeight + "px";
     }
-    
+
     // Collapse all other accordion items
     for (let j = 0; j < acc.length; j++) {
       if (acc[j] !== currentAccordion) {
@@ -159,7 +381,6 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
-
 // -----------------------------------------------------Stats Animation----------------------------------------------------
 
 const el1 = document.getElementById("val1");
@@ -172,28 +393,8 @@ const val3 = parseInt(el3.textContent);
 
 console.log(parseInt(el1.textContent));
 
-var animationTriggered = false;
-
-$('#paper-window').on("scroll", function () {
-  console.log("scroll");
-  if (!animationTriggered) {
-    var sectionStats = $(".section-stats")[0]; // Get the DOM element
-    var statsRect = sectionStats.getBoundingClientRect(); // Get the position of the element
-    var windowHeight = $('#paper-window').height();
-    var scrollTop = $('#paper-window').scrollTop();
-    var viewportBottom = scrollTop + windowHeight;
-
-    if (statsRect.bottom < viewportBottom) {
-      console.log("animation triggered");
-      animateValue(el1, 0, val1, 2000);
-      animateValue(el2, 0, val2, 4000);
-      animateValue(el3, 0, val3, 2000);
-      animationTriggered = true;
-    }
-  }
+onReveal(".section-stats", () => {
+  // animateValue(el1, 0, val1, 2000);
+  animateValue(el2, 0, val2, 4000);
+  animateValue(el3, 0, val3, 2000);
 });
-
-
-
-
-// animateValue(el1, 0, 20, 2000);
