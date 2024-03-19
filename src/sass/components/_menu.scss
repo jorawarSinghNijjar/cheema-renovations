@@ -69,6 +69,14 @@
     pointer-events: none;
     #paper-front {
       transform: rotate(7deg) translateZ(0) translateY(5rem);
+
+      @include design(md) {
+        transform: rotate(4deg) translateZ(0) translateY(5rem);
+      }
+
+      @include design(sm) {
+        transform: rotate(3deg) translateZ(0) translateY(5rem);
+      }
     }
   }
 }
@@ -81,6 +89,10 @@
   box-shadow: 0 0 20px rgba(black, 0.7);
   transform-origin: center 70%;
   transition: all 0.3s ease;
+
+  @include design(md) {
+    transform-origin: top 100vh;
+  }
 }
 
 .hamburger {

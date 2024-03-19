@@ -3,10 +3,10 @@
   position: relative;
   padding-top: 7.8rem;
   padding-bottom: 6.8rem;
-  min-height: 90vh; // If not video thumbnail
+  min-height: 70rem; // If not video thumbnail
 
   @include design(2xl) {
-    padding-top: 3rem;
+    padding-top: 15rem;
   }
 
   @include design(xl) {
@@ -17,6 +17,10 @@
     padding-top: 12rem;
   }
 
+  // @include design(xs) {
+  //   min-height: 90rem;
+  // }
+
   .container {
     @include design(md) {
       min-height: 64rem;
@@ -25,32 +29,50 @@
 
   .button {
     opacity: 0; // for animation purposes
+
+    @include design(md) {
+      background-color: $color-brown;
+    }
   }
 
   &__hero-image-wrapper {
     opacity: 0; // for animation purposes
 
+    background-image: url("https://ik.imagekit.io/zkz3xepw7/cheema-renovations/images/hero/hero-2.jpg?updatedAt=1710805433596");
+    // transform: scaleX(-1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     z-index: -10;
     position: absolute;
     right: 0;
     top: 0;
-    max-width: $container-max-w-default;
+    width: 100%;
+    height: 100%;
+    // max-width: $container-max-w-default;
     max-height: 63rem;
-   
 
-    @include design(3xl) {
-      max-width: $container-max-w-3xl;
-    }
+    // @include design(3xl) {
+    //   max-width: $container-max-w-3xl;
+    // }
 
-    @include design(2xl) {
-      max-width: calc(0.7 * $container-max-w-2xl);
-    }
+    // @include design(2xl) {
+    //   max-width: calc(0.7 * $container-max-w-2xl);
+    // }
 
-    @include design(xl) {
-      max-width: $container-max-w-xl;
+    // @include design(xl) {
+    //   max-width: $container-max-w-xl;
+    //   max-height: 100vh;
+    //   min-height: 70rem;
+    //   top: 0;
+    // }
+
+    @include design(md) {
       max-height: 100vh;
-      min-height: 70rem;
-      top: 0;
+      height: 100%;
+      background-size: cover;
+      background-image: url("https://ik.imagekit.io/zkz3xepw7/cheema-renovations/images/hero/mobil-hero.jpg");
     }
   }
 
@@ -73,6 +95,7 @@
 
     @include design(md) {
       min-height: 100vh;
+      // object-position: right;
     }
   }
 
@@ -90,12 +113,24 @@
     }
   }
 
-
   &__heading {
     // opacity: 0; // for animation purposes
 
     color: $color-black;
-    font-family: PT Serif;
+    font-family: "PT Serif", system-ui;
+
+    @include design(md) {
+      font-size: 4rem;
+      font-family: "Rubik Wet Paint", system-ui;
+      font-weight: 400;
+    }
+
+    @include design(sm) {
+      font-size: 3rem;
+      font-family: "Rubik Wet Paint", system-ui;
+      font-weight: 400;
+    }
+
     line-height: 9.5rem;
     letter-spacing: 0.5px;
 
@@ -150,6 +185,8 @@
     }
 
     &--md {
+      display: none; // No video thumbnail for now
+
       position: relative;
       max-width: 93%;
       margin: 0 auto;
@@ -200,6 +237,10 @@
       width: 100%;
       box-shadow: none;
     }
+
+    @include design(md) {
+      padding: 0.5rem 0.5rem;
+    }
   }
 
   &__hero-image {
@@ -239,7 +280,9 @@
     }
 
     @include design(md) {
+      min-width: auto;
       padding: 5rem;
+      max-width: 100%;
     }
   }
 
